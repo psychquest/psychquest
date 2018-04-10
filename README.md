@@ -14,6 +14,6 @@ To launch application's tests, run:
 
     ./mvnw clean test
 
-##License
+## License
 
 psychQuest is released under the [GNU Affero General Public License, Version 3](https://www.gnu.org/licenses/agpl-3.0.html).
