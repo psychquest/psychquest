@@ -1,0 +1,17 @@
+language: java
+sudo: false
+install: true
+jdk:
+  - oraclejdk8
+addons:
+  sonarcloud:
+    organization: "psychquest-github"
+    token:
+        secure: "1ZNclYNOOJnGuYYEOlBOdwbqO+ZEPQN6Elz1BKVzfO7OG8AV3RsWkvQyr9DsDUE08DpB0Ji4Sn9kbmGMDCPPmlLP+XxONfNxB4D1X99hrpLiUtqmUeNJCQXgw7r+0l29GDjmg2eHvruQAshUluyS2uWZadfdCwjFKcP3CEm/s3Y9rSDe4RFIyw3dhrxbygabrHSPsDuv9Z62ZdzLD5v7gj9HyyApYpP1AKPfjURhlFiCtOWlhzI2FkvlvR1UnTFGe/tfPFW9VuIzfwyT7mXmA31Ho47qAqGTTeCXyoBtm5Nz+251P0nmcjpDBK3h75QZTT5ZTNFdU/+dCbf6angI8MaOwBYy+CmL43tFELysnnyzV7AcMd/yJR9InfAGWl7QLz2AnSGCZ62nTuNmQ7KVDdKHxuytuedi4mm6I6jDSUfqi/7bIDSWAaFSoO9rg2xOQdvNfbq1Ia3xip5RXau5/scZ00xygcRsuYw5Oh9i8nYGurYVeICNFS0nls71B46hkGWcsB5OugO+2etlID37X7CadMDW6kploX2QHMXw9BkXLf+40cxE3QwTLp2cMEp/IWjE4m0cjrVrbsI5FPFW5CIQsNIAP5kARUBho7uUBYQlQ9nrgbvGgw+sTBLfBkUI1Cm1DMllqFU01lmcQBBwXtE1a1C1T63yxPDGOkQoClQ="
+script:
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
