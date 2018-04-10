@@ -1,6 +1,6 @@
 # The psychQuest Project
 
-[![Build Status](https://travis-ci.org/psychquest/psychquest.svg?branch=develop)](https://travis-ci.org/psychquest/psychquest)
+[![Build Status](https://travis-ci.org/psychquest/psychquest.svg)](https://travis-ci.org/psychquest/psychquest) [![SonarCloud Security Rating](https://sonarcloud.io/api/project_badges/measure?project=io.psychquest%3Apsychquest&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=io.psychquest%3Apsychquest&metric=security_rating) [![SonarCloud Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=io.psychquest%3Apsychquest&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=io.psychquest%3Apsychquest&metric=alert_status)
 
 ## Development
 
