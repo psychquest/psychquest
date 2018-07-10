@@ -1,4 +1,4 @@
-package io.psychquest.psychquest;
+package io.psychquest.app;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

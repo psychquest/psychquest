@@ -1,0 +1,14 @@
+server:
+    port: 8080
+    servlet:
+        session:
+            cookie:
+                http-only: true
+spring:
+    application:
+        name: psychQuest
+    mvc:
+        favicon:
+            enabled: false
+    profiles:
+        active: dev

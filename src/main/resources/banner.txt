@@ -1,0 +1,13 @@
+
+${AnsiColor.BRIGHT_GREEN}██████╗ ███████╗██╗   ██╗ ██████╗██╗  ██╗ ██████╗ ██╗   ██╗███████╗███████╗████████╗
+${AnsiColor.BRIGHT_GREEN}██╔══██╗██╔════╝╚██╗ ██╔╝██╔════╝██║  ██║██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝
+${AnsiColor.BRIGHT_GREEN}██████╔╝███████╗ ╚████╔╝ ██║     ███████║██║   ██║██║   ██║█████╗  ███████╗   ██║
+${AnsiColor.BRIGHT_GREEN}██╔═══╝ ╚════██║  ╚██╔╝  ██║     ██╔══██║██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║
+${AnsiColor.BRIGHT_GREEN}██║     ███████║   ██║   ╚██████╗██║  ██║╚██████╔╝╚██████╔╝███████╗███████║   ██║
+${AnsiColor.BRIGHT_GREEN}╚═╝     ╚══════╝   ╚═╝    ╚═════╝╚═╝  ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝
+${AnsiColor.YELLOW}-------------------------
+${AnsiColor.YELLOW}Application Configuration
+${AnsiColor.YELLOW}-------------------------
+Running Spring Boot ${spring-boot.version}
+${AnsiColor.YELLOW}-------------------------
+${AnsiColor.DEFAULT}
