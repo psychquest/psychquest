@@ -1,9 +1,3 @@
-spring:
-    data:
-        neo4j:
-            uri: bolt://localhost
-            username: neo4j
-            password: secret
 psychquest:
     password-hashing-secret: important-to-be-changed-at-production-important-to-be-changed-at-production
     # Token is valid 24 hours
