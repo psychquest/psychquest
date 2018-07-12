@@ -7,6 +7,8 @@ import static org.springframework.http.HttpHeaders.AUTHORIZATION;
  */
 public class HttpHeaders {
 
+    private HttpHeaders() {
+    }
 
     public static HeaderBuilder authorization(String jwt) {
         HeaderBuilder builder = new HeaderBuilder();

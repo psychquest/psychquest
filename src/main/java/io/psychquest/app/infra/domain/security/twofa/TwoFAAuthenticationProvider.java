@@ -1,16 +1,14 @@
 package io.psychquest.app.infra.domain.security.twofa;
 
+import io.psychquest.app.infra.domain.security.DomainUserDetails;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.jboss.aerogear.security.otp.Totp;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
-
-import io.psychquest.app.infra.domain.security.DomainUserDetails;
 
 @Component
 public class TwoFAAuthenticationProvider implements AuthenticationProvider {

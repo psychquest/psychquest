@@ -4,7 +4,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
 import java.util.Collection;
-import java.util.Objects;
 
 /**
  * Spring Security's UserDetails with extended options for 2FA auth.
