@@ -10,11 +10,11 @@ import java.util.Set;
 @Repository
 public interface UserRepository extends Neo4jRepository<User, Long> {
 
-    Optional<User> findOneByCredentials_ActivationKey(String activationKey);
+    Optional<User> findOneByCredentialsActivationKey(String activationKey);
 
-    Optional<User> findOneByCredentials_PasswordResetKey(String resetKey);
+    Optional<User> findOneByCredentialsPasswordResetKey(String resetKey);
 
     Optional<User> findOneByEmailIgnoreCase(String email);
 
-    Set<User> findAllByCredentials_ActivatedIsFalseAndCredentials_ActivationKeyCreatedAtBefore(Instant createdBefore);
+    Set<User> findAllByCredentialsActivatedIsFalseAndCredentialsActivationKeyCreatedAtBefore(Instant createdBefore);
 }

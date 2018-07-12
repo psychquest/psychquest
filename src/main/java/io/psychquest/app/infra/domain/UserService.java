@@ -48,7 +48,7 @@ public class UserService {
 
     public Optional<User> activateRegistration(String key) {
         log.debug("Activating user for activation key {}", key);
-        return userRepository.findOneByCredentials_ActivationKey(key)
+        return userRepository.findOneByCredentialsActivationKey(key)
             .map(user -> {
                 user.getCredentials().setActivated(true);
                 user.getCredentials().setActivationKey(null);
@@ -60,7 +60,7 @@ public class UserService {
     public Optional<User> completePasswordReset(String newPassword, String key) {
         log.debug("Reset user password for reset key {}", key);
 
-        return userRepository.findOneByCredentials_PasswordResetKey(key)
+        return userRepository.findOneByCredentialsPasswordResetKey(key)
             .filter(user -> user.getCredentials().getPasswordResetKeyCreatedAt().isAfter(Instant.now().minusSeconds(86400)))
             .map(user -> {
                 user.getCredentials().setPasswordHash(passwordEncoder.encode(newPassword));
@@ -154,7 +154,7 @@ public class UserService {
     public void removeNotActivatedUsers() {
         log.info("User housekeeping job started.");
         long start = System.currentTimeMillis();
-        Set<User> users = userRepository.findAllByCredentials_ActivatedIsFalseAndCredentials_ActivationKeyCreatedAtBefore(Instant.now().minus(3, ChronoUnit.DAYS));
+        Set<User> users = userRepository.findAllByCredentialsActivatedIsFalseAndCredentialsActivationKeyCreatedAtBefore(Instant.now().minus(3, ChronoUnit.DAYS));
         for (User user : users) {
             log.debug("Deleting not activated user {}", user.getEmail());
             userRepository.delete(user);

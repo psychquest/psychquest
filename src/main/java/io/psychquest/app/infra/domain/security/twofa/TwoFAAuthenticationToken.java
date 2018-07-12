@@ -43,4 +43,24 @@ public class TwoFAAuthenticationToken extends AbstractAuthenticationToken {
     public String getPrincipal() {
         return userLogin;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TwoFAAuthenticationToken)) return false;
+        if (!super.equals(o)) return false;
+
+        TwoFAAuthenticationToken that = (TwoFAAuthenticationToken) o;
+
+        if (!userLogin.equals(that.userLogin)) return false;
+        return token.equals(that.token);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + userLogin.hashCode();
+        result = 31 * result + token.hashCode();
+        return result;
+    }
 }

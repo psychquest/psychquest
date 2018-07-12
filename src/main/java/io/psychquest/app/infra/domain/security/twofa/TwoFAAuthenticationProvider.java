@@ -23,7 +23,7 @@ public class TwoFAAuthenticationProvider implements AuthenticationProvider {
     }
 
     @Override
-    public Authentication authenticate(Authentication auth) throws AuthenticationException {
+    public Authentication authenticate(Authentication auth) {
         String userLogin = (String) auth.getPrincipal();
         if (StringUtils.isNotBlank(userLogin)) {
             DomainUserDetails user = (DomainUserDetails) userDetailsService.loadUserByUsername(userLogin);
@@ -50,10 +50,6 @@ public class TwoFAAuthenticationProvider implements AuthenticationProvider {
     private boolean userHasValid2FAOptionsSet(DomainUserDetails user) {
         return user.getUses2FA() == Boolean.TRUE
             && StringUtils.isNotBlank(user.getTwoFASecret());
-    }
-
-    private boolean additionalVerification(DomainUserDetails user) {
-        return user.isAccountNonExpired() && user.isAccountNonLocked() && user.isCredentialsNonExpired() && user.isEnabled();
     }
 
     @Override

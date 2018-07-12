@@ -36,7 +36,7 @@ public class DomainUserDetailsService implements UserDetailsService {
 
     @Override
     @Transactional(readOnly = true)
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String email) {
         log.debug("Authenticating user {}", email);
         String lowerCaseEmail = StringUtils.lowerCase(email, Locale.GERMAN);
         boolean isvalidEmail = new EmailValidator().isValid(lowerCaseEmail, null);
